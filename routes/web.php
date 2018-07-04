@@ -31,6 +31,6 @@ Route::get('/categories','CategoryController@index')->name('categories.index');
 
 Route::get('/products/edit/{id}','ProductController@edit')->name('products.edit');
 
-Route::get('/products/update','ProductController@update')->name('products.update');
+Route::post('/products/update','ProductController@update')->name('products.update');
 
 

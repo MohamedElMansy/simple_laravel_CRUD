@@ -71,13 +71,19 @@ class productController extends Controller
 
     }
 
-    public function update(StoreproductRequest $request)
+    public function update(Request $request)
 
     {
-        $product = new products();
-       $product->name = $request->name;
-        $product->category_id = $request->category_id;
+        $id = $request->id;
+        $name =$request->name;
+        $category_id=$request->category_id;
+
+        $product =  products::find($id);
+        $product->name = $name;
+        $product->category_id = $category_id;
         $product->save();
+
+
 
         return redirect()->route('products.index');
 

@@ -11,7 +11,7 @@
             <input value="{{$product->name}}" name="name"><br>
             <label>cat id </label><br>
             <input  value="{{$product->category_id}}" name="category_id"><br>
-
+            <input  type="hidden" name="id" value="{{$product->id}}">
             <input type="submit" value="add">
 
         @endforeach
